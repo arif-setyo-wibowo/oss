@@ -51,7 +51,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Vendor</a>
       </li>
     </ul>
   </nav>
@@ -62,7 +62,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{ asset('assets/admin/') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">tes </span>
+      <span class="brand-text font-weight-light">Vendor </span>
     </a>
 
     <!-- Sidebar -->
@@ -91,24 +91,32 @@
             </a>
           </li>
 
-            <li class="nav-header">Action data</li>
-            <li class="nav-item">
-                <a href="" class="nav-link" >
-                <i class="nav-icon fas fa-columns"></i>
-                <p>
-                    kategori
-                </p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{ route('produk.index') }}" class="nav-link {{ request()->routeIs('produk.index') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-columns"></i>
-                    <p>
-                        Produk
-                    </p>
-                </a>
-            </li>
-            <li class="nav-item">
+          <li class="nav-item">
+              <li class="nav-header">Action data</li>
+              <li class="nav-item">
+                  <a href="" class="nav-link" >
+                  <i class="nav-icon fas fa-columns"></i>
+                  <p>
+                      Toko
+                  </p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="" class="nav-link" >
+                  <i class="nav-icon fas fa-columns"></i>
+                  <p>
+                      Product
+                  </p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="" class="nav-link" >
+                  <i class="nav-icon fas fa-columns"></i>
+                  <p>
+                      Order
+                  </p>
+                  </a>
+              </li>
                 <a href="" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
