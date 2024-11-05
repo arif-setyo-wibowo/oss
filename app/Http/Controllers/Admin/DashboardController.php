@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class AdminController extends Controller
             'title' => "Dashboard",
 
         ];
-        return view('admin/admin',$data);
+        return view('admin/dashboard',$data);
     }
 
     /**
