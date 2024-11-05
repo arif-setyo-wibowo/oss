@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Detail Data Produk</h1>
+                        <h1>Detail Order</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -37,7 +37,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link active" id="custom-tab-kategori" data-toggle="pill"
                                             href="#tab-kategori" role="tab" aria-controls="tab-kategori"
-                                            aria-selected="true">Data detail produk</a>
+                                            aria-selected="true">Data Detail Order</a>
                                     </li>
                                 </ul>
                             </div>
@@ -55,36 +55,46 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>ID Produk</td>
+                                                    <th>Nomor Order</th>
                                                     <td>1</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Nama Kategori</td>
-                                                    <td>Baju</td>
+                                                    <th>Nama Pembeli</th>
+                                                    <td>Setyo</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Nama Produk</td>
-                                                    <td>Kaos L</td>
+                                                    <th>Total</th>
+                                                    <td>Rp.90.000</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Nama Vendor</td>
-                                                    <td>Uniqlo</td>
+                                                    <th>Status</th>
+                                                    <td><span class="btn btn-warning btn-sm">Pending</span></td>
                                                 </tr>
+                                        </table>
+                                        <table class="table table-bordered table-striped">
+                                            <thead>
                                                 <tr>
-                                                    <td>Gambar</td>
-                                                    <td>
-                                                        <a href="" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
-                                                            <img width="150px"src="" class="img-fluid mb-2" alt="white sample" />
-                                                        </a>
-                                                    </td>
+                                                    <th style="width: 10%;">No</th>
+                                                    <th>Nama Barang</th>
+                                                    <th>Penjual</th>
+                                                    <th>Harga</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Total</th>
                                                 </tr>
+                                            </thead>
+                                            <h4 class="mt-5">Detail Barang</h4>
+                                            <tbody>
                                                 <tr>
+                                                    <td>1</td>
+                                                    <td>Nama Barang</td>
+                                                    <td>Penjual</td>
                                                     <td>Harga</td>
-                                                    <td>81000</td>
+                                                    <td>Jumlah</td>
+                                                    <td>Total</td>
                                                 </tr>
                                         </table>
 
-                                        <a href="{{ route('produk.index') }}">
+                                        <a href="{{ route('order.index') }}">
                                             <button type="button" class="btn btn-danger">Kembali</button>
                                         </a>
                                     </div>

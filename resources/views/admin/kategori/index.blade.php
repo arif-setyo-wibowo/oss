@@ -32,15 +32,9 @@
                         </div>
                         <?php endif ?>
                         <div class="card card-primary card-outline card-tabs">
-                            <div class="card-header p-0 pt-1 border-bottom-0">
-                                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="custom-tab-kategori" data-toggle="pill"
-                                            href="#tab-kategori" role="tab" aria-controls="tab-kategori"
-                                            aria-selected="true">Data Kategori</a>
-                                    </li>
-                                </ul>
-                                <a href="{{ route('kategori.create')}}" class="btn btn-primary m-3">Tambah Data</a>
+                            <div class="card-header d-flex align-items-center">
+                                <h3 class="card-title">Data Kategori</h3>
+                                <a href="{{ route('kategori.create')}}" class="btn btn-primary btn-sm ml-auto">Tambah Data</a>
                             </div>
 
                             <div class="card-body">

@@ -18,6 +18,9 @@ Route::prefix('admin')->group(function () {
     Route::resource('/', DashboardController::class);
     Route::resource('kategori', KategoriController::class);
     Route::resource('produk', ProdukController::class);
+    Route::resource('order', App\Http\Controllers\Admin\OrderController::class);
+    Route::resource('vendor', App\Http\Controllers\Admin\VendorController::class);
+    Route::resource('user', App\Http\Controllers\Admin\UserController::class);
 });
 
 Route::prefix('vendor')->group(function () {

@@ -32,15 +32,8 @@
                         </div>
                         <?php endif ?>
                         <div class="card card-primary card-outline card-tabs">
-                            <div class="card-header p-0 pt-1 border-bottom-0">
-                                <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="custom-tab-kategori" data-toggle="pill"
-                                            href="#tab-kategori" role="tab" aria-controls="tab-kategori"
-                                            aria-selected="true">Data Produk</a>
-                                    </li>
-                                </ul>
-                                <a href="{{ route('kategori.create')}}" class="btn btn-primary m-3">Tambah Data</a>
+                            <div class="card-header d-flex align-items-center">
+                                <h3 class="card-title">Data Produk</h3>
                             </div>
 
                             <div class="card-body">
@@ -61,30 +54,30 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Baju</td>
-                                                        <td>Uniqlo</td>
-                                                        <td>Kaos L</td>
-                                                        <td>kaso bagus</td>
-                                                        <td>89000</td>
-                                                        <td>gambar</td>
-                                                        <td>
-                                                            <a href="{{ route('produk.show',1)}}">
-                                                                <button type="button" class="btn btn-info btn-sm">
-                                                                    <i class="fas fa-eye"></i>
-                                                                    Show
-                                                                </button>
-                                                            </a>
-                                                            <a class="btn btn-danger btn-sm"
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Baju</td>
+                                                    <td>Uniqlo</td>
+                                                    <td>Kaos L</td>
+                                                    <td>kaso bagus</td>
+                                                    <td>89000</td>
+                                                    <td>gambar</td>
+                                                    <td>
+                                                        <a href="{{ route('produk.show', 1) }}">
+                                                            <button type="button" class="btn btn-info btn-sm">
+                                                                <i class="fas fa-eye"></i>
+                                                                Show
+                                                            </button>
+                                                        </a>
+                                                        <a class="btn btn-danger btn-sm"
                                                             onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Produk?')"
                                                             href="{{ route('produk.destroy', 1) }}">
-                                                                <i class="fas fa-trash">
-                                                                </i>
-                                                                Delete
-                                                            </a>
-                                                        </td>
-                                                    </tr>
+                                                            <i class="fas fa-trash">
+                                                            </i>
+                                                            Delete
+                                                        </a>
+                                                    </td>
+                                                </tr>
                                         </table>
                                     </div>
                                 </div>
@@ -101,13 +94,15 @@
     <!-- /.content-wrapper -->
 @endsection
 @section('js')
-<script src="{{ asset('assets/admin') }}/assets/js/custom/kategori.js"></script>
-<script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    });
-  </script>
+    <script src="{{ asset('assets/admin') }}/assets/js/custom/kategori.js"></script>
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
 @endsection
