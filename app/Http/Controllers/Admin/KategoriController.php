@@ -1,18 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Produk;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProdukController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data=[
+            'title' => "Kategori",
+        ];
+
+        return view('admin/kategori/index',$data);
     }
 
     /**
@@ -34,7 +38,7 @@ class ProdukController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Produk $produk)
+    public function show(string $id)
     {
         //
     }
@@ -42,15 +46,17 @@ class ProdukController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Produk $produk)
+    public function edit($id)
     {
-        //
+        $title = 'Edit kategori';
+        $idkategori = $id;
+        return view('admin/kategori/edit', compact('idkategori','title'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Produk $produk)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +64,7 @@ class ProdukController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Produk $produk)
+    public function destroy(string $id)
     {
         //
     }
