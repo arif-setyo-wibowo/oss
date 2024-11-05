@@ -93,11 +93,11 @@
 
             <li class="nav-header">Action data</li>
             <li class="nav-item">
-                <a href="" class="nav-link" >
-                <i class="nav-icon fas fa-columns"></i>
-                <p>
-                    kategori
-                </p>
+                <a href="{{ route('kategori.index') }}" class="nav-link {{ request()->routeIs('kategori.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-columns"></i>
+                    <p>
+                        Kategori
+                    </p>
                 </a>
             </li>
             <li class="nav-item">
