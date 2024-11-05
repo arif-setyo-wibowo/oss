@@ -13,10 +13,10 @@ class ProductController extends Controller
     public function index()
     {
         $data=[
-            'title' => "Product",
-
+            'title' => "Produk",
         ];
-        return view('admin/dashboard',$data);
+
+        return view('vendor/produk/index',$data);
     }
 
     /**
@@ -24,7 +24,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Tambah Produk';
+        return view('vendor/produk/create', compact('title'));
     }
 
     /**
@@ -40,7 +41,9 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $title = 'Detail Produk';
+        $idproduk = $id;
+        return view('vendor/produk/show', compact('idproduk','title'));
     }
 
     /**

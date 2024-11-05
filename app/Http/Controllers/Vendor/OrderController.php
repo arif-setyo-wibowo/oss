@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Vendor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class VendorController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,10 +13,10 @@ class VendorController extends Controller
     public function index()
     {
         $data=[
-            'title' => "Toko",
-
+            'title' => "Order",
         ];
-        return view('vendor/toko',$data);
+
+        return view('vendor/order/index',$data);
     }
 
     /**
@@ -40,7 +40,9 @@ class VendorController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $title = 'Detail Order';
+        $idorder = $id;
+        return view('vendor/order/show', compact('idorder','title'));
     }
 
     /**

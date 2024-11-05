@@ -83,7 +83,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ url('/')}}" @if ($title == 'Dashboard') class="nav-link active" @else class="nav-link" @endif>
+            <a href="{{ url('/')}}" @if ($title == 'Vendor') class="nav-link active" @else class="nav-link" @endif>
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -94,28 +94,28 @@
           <li class="nav-item">
               <li class="nav-header">Action data</li>
               <li class="nav-item">
-                  <a href="" class="nav-link" >
-                  <i class="nav-icon fas fa-columns"></i>
-                  <p>
-                      Toko
-                  </p>
-                  </a>
+                <a href="{{ route('toko.index') }}" class="nav-link {{ request()->routeIs('toko.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-columns"></i>
+                    <p>
+                        Toko
+                    </p>
+                </a>
               </li>
               <li class="nav-item">
-                  <a href="" class="nav-link" >
-                  <i class="nav-icon fas fa-columns"></i>
-                  <p>
-                      Product
-                  </p>
-                  </a>
+                <a href="{{ route('product.index') }}" class="nav-link {{ request()->routeIs('product.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-columns"></i>
+                    <p>
+                        Product
+                    </p>
+                </a>
               </li>
               <li class="nav-item">
-                  <a href="" class="nav-link" >
-                  <i class="nav-icon fas fa-columns"></i>
-                  <p>
-                      Order
-                  </p>
-                  </a>
+                <a href="{{ route('order.index') }}" class="nav-link {{ request()->routeIs('order.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-columns"></i>
+                    <p>
+                        Order
+                    </p>
+                </a>
               </li>
                 <a href="" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
