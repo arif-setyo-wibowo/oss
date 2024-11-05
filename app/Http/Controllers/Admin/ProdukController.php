@@ -12,7 +12,11 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        //
+        $data=[
+            'title' => "Produk",
+        ];
+
+        return view('admin/produk/index',$data);
     }
 
     /**
@@ -34,18 +38,13 @@ class ProdukController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $title = 'Detail Produk';
+        $idproduk = $id;
+        return view('admin/produk/show', compact('idproduk','title'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
