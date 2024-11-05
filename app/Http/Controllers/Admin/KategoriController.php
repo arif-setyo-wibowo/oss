@@ -24,7 +24,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Tambah Kategori';
+        return view('admin/kategori/create', compact('title'));
     }
 
     /**

@@ -39,12 +39,8 @@
                                             href="#tab-kategori" role="tab" aria-controls="tab-kategori"
                                             aria-selected="true">Data Kategori</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="custom-tab-tambah-edit" data-toggle="pill"
-                                            href="#tab-tambah-edit" role="tab" aria-controls="tab-tambah-edit"
-                                            aria-selected="false">Tambah Kategori</a>
-                                    </li>
                                 </ul>
+                                <a href="{{ route('kategori.create')}}" class="btn btn-primary m-3">Tambah Data</a>
                             </div>
 
                             <div class="card-body">
@@ -81,22 +77,6 @@
                                                     </tr>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="tab-tambah-edit" role="tabpanel"
-                                        aria-labelledby="custom-tab-tambah-edit">
-                                        <form action="{{ route('kategori.store') }}" method="POST">
-                                            @csrf
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Kategori</label>
-                                                <input type="text" class="form-control" id="kategori" name="kategori"
-                                                    placeholder="Masukkan Kategori" required>
-                                                <input type="hidden" name="idkategori" id="idkategori">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="submit" name="proses" id="proses" value="Tambah"
-                                                    class="btn btn-primary">
-                                            </div>
-                                        </form>
-                                    </div>
                                 </div>
                             </div>
                             <!-- /.card -->
@@ -107,7 +87,6 @@
             <!-- /.container-fluid -->
         </section>
         <!-- /.content -->
-
     </div>
     <!-- /.content-wrapper -->
 @endsection
