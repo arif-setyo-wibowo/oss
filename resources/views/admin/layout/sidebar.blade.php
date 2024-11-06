@@ -137,7 +137,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('withdraw.index') }}"
+                            <a href="{{ url('admin/withdraw') }}"
                                 class="nav-link {{ request()->routeIs('withdraw.*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-money-bill-wave"></i>
                                 <p>
