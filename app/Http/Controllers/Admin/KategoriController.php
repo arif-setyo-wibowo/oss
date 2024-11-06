@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -15,6 +16,7 @@ class KategoriController extends Controller
         $data=[
             'title' => "Kategori",
         ];
+
 
         return view('admin/kategori/index',$data);
     }
@@ -33,7 +35,15 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'kategori' => 'required|max:10',
+        ]);
+
+        Kategori::create([
+            'nama' => $request->input('kategori'),
+        ]);
+
+        return redirect('admin/kategori')->with('msg', 'Berhasil membuat kategori.');
     }
 
     /**

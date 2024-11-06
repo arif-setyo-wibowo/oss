@@ -31,6 +31,13 @@
                             </button>
                         </div>
                         <?php endif ?>
+                        @if ($errors->any())
+                            <div class="alert alert-danger fade show" role="alert">
+                                @foreach ($errors->all() as $error)
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                         <div class="card card-primary card-outline card-tabs">
                             <div class="card-header p-0 pt-1 border-bottom-0">
                                 <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
