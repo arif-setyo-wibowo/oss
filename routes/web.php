@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\ProdukController;
 use App\Http\Controllers\Vendor\DashboardVendorController;
 use App\Http\Controllers\Vendor\VendorController;
+use App\Http\Controllers\Vendor\WithdrawController;
 use App\Http\Controllers\Vendor\ProductController as productVendor;
 use App\Http\Controllers\Vendor\OrderController as orderVendor;
 
@@ -29,6 +30,7 @@ Route::prefix('vendor')->group(function () {
     Route::resource('toko', VendorController::class);
     Route::resource('product', productVendor::class);
     Route::resource('order', orderVendor::class);
+    Route::resource('withdraw', WithdrawController::class);
 });
 
 Route::get('/dashboard', function () {

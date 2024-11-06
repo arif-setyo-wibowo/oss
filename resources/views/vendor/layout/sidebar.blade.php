@@ -117,6 +117,14 @@
                     </p>
                 </a>
               </li>
+            <li class="nav-item">
+                <a href="{{ route('withdraw.index') }}" class="nav-link {{ request()->routeIs('withdraw.index') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-money-bill-wave"></i>
+                    <p>
+                        Withdraw
+                    </p>
+                </a>
+            </li>
                 <a href="" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
