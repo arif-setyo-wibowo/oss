@@ -20,6 +20,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('produk', ProdukController::class);
     Route::resource('order', App\Http\Controllers\Admin\OrderController::class);
     Route::resource('vendor', App\Http\Controllers\Admin\VendorController::class);
+    Route::resource('withdraw', App\Http\Controllers\Admin\WithdrawController::class);
     Route::resource('user', App\Http\Controllers\Admin\UserController::class);
 });
 
